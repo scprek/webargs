@@ -35,7 +35,7 @@ When you need more flexibility in defining input schemas, you can pass a marshma
 .. code-block:: python
 
     from marshmallow import Schema, fields
-    from webargs.flaskparser import use_args
+    from webargs.flaskparser import use_args, use_kwargs
 
 
     class UserSchema(Schema):
@@ -52,7 +52,7 @@ When you need more flexibility in defining input schemas, you can pass a marshma
 
     @use_args(UserSchema())
     def profile_view(args):
-        username = args["userame"]
+        username = args["username"]
         # ...
 
 
